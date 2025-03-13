@@ -1,0 +1,68 @@
+# Op-Amp Amplifier Simulations
+
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Inverting Amplifier Simulation](#inverting-amplifier-simulation)
+3. [Non-Inverting Amplifier Simulation](#non-inverting-amplifier-simulation)
+4. [Results and Observations](#results-and-observations)
+5. [Conclusions](#conclusions)
+
+## Introduction
+This repository contains LTspice simulations for the following amplifier circuits:
+1. Inverting Amplifier
+2. Non-Inverting Amplifier
+
+
+## Inverting Amplifier Simulation
+
+### Circuit Description
+The inverting amplifier is a basic op-amp configuration where the input signal is inverted and amplified based on the ratio of two resistors (Rf and R1). The input is applied to the inverting terminal of the op-amp.
+
+### LTspice Simulation Setup
+- **Op-Amp**: OP07 or TL081
+- **Resistor Values**: 
+  - R1 = 10kΩ
+  - Rf = 100kΩ
+- **Input Signal**: Sinusoidal signal with an amplitude of 1V and a frequency of 1kHz.
+
+### Simulation Results
+Below are the simulation results showing the inverted output waveform:
+
+![Inverting Amplifier Simulation](path_to_screenshot_of_waveform.png)
+
+### Observations
+- The output signal is inverted relative to the input.
+- The gain of the circuit is determined by the ratio of Rf to R1, and the calculated gain is `-Rf/R1`.
+
+## Non-Inverting Amplifier Simulation
+
+### Circuit Description
+The non-inverting amplifier configuration allows the input signal to remain in phase with the output, with amplification determined by the ratio of Rf to R1.
+
+### LTspice Simulation Setup
+- **Op-Amp**: OP07 or TL081
+- **Resistor Values**:
+  - R1 = 10kΩ
+  - Rf = 100kΩ
+- **Input Signal**: Sinusoidal signal with an amplitude of 1V and a frequency of 1kHz.
+
+### Simulation Results
+Below are the simulation results showing the non-inverted output waveform:
+
+![Non-Inverting Amplifier Simulation](path_to_screenshot_of_waveform.png)
+
+### Observations
+- The output signal is in phase with the input.
+- The gain of the circuit is calculated as `1 + Rf/R1`, and the calculated gain is 11.
+
+## Results and Observations
+- The inverting amplifier provided an output that was inverted, with a gain of -10 (calculated with Rf = 100kΩ and R1 = 10kΩ).
+- The non-inverting amplifier produced an output in phase with the input, with a gain of 11.
+
+## Conclusions
+These simulations demonstrate the basic functionality of inverting and non-inverting amplifiers. They serve as a foundation for understanding op-amp behavior in more complex circuits.
+
+---
+### Files
+- **Inverting Amplifier LTspice File**: [inverting_amp.asc](link_to_inverting_amp.asc)
+- **Non-Inverting Amplifier LTspice File**: [non_inverting_amp.asc](link_to_non_inverting_amp.asc)
